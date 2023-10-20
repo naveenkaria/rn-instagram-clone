@@ -1,15 +1,19 @@
-import { View, Text } from "react-native";
+import "react-native-gesture-handler";
+import React from "react";
+import { SafeAreaView, Platform, StyleSheet } from "react-native";
+import Navigation from "./src/components/navigation";
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
+    <SafeAreaView style={styles.SafeAreaViewPadding}>
+      <Navigation />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  SafeAreaViewPadding: {
+    flex: 1,
+    paddingTop: Platform.OS === "android" ? 25 : 0,
+  },
+});
