@@ -10,7 +10,7 @@ export default function App() {
     </SafeAreaView>
   );
 }
-
+//Testing
 const styles = StyleSheet.create({
   SafeAreaViewPadding: {
     flex: 1,
