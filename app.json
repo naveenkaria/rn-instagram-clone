@@ -1,12 +1,20 @@
 {
   "expo": {
-    "name": "blank",
-    "slug": "blank",
+    "name": "Instagram Clone",
+    "slug": "instagramclone",
     "version": "1.0.0",
     "platforms": [
       "ios",
       "android",
       "web"
-    ]
+    ],
+    "android": {
+      "package": "com.naveenkaria.instagramclone"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "720019eb-e84e-4550-bd20-53dd535ec893"
+      }
+    }
   }
 }

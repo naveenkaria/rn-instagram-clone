@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, ScrollView } from "react-native";
 import LoginForm from "../../components/LoginScreen/LoginForm";
 
 const INSTAGRAM_LOGO =
@@ -7,15 +7,17 @@ const INSTAGRAM_LOGO =
 
 const LoginScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.loginContainer}>
-        <Image
-          source={{ uri: INSTAGRAM_LOGO }}
-          style={{ width: 100, height: 100 }}
-        />
+    <ScrollView>
+      <View style={styles.container}>
+        <View style={styles.loginContainer}>
+          <Image
+            source={{ uri: INSTAGRAM_LOGO }}
+            style={{ width: 100, height: 100 }}
+          />
+        </View>
+        <LoginForm navigation={navigation} />
       </View>
-      <LoginForm navigation={navigation} />
-    </View>
+    </ScrollView>
   );
 };
 
